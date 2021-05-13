@@ -107,7 +107,7 @@ if (cluster.isMaster) {
     next();
   })
 
-  app.post('/produceClickMessage', function (req, res) {
+  app.post('/fireTrigger', function (req, res) {
     console.log(req.body);
     try {
       const topic = `${process.env.KAFKA_PREFIX}${req.body.topic}`;
